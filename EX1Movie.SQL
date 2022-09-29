@@ -22,5 +22,17 @@ insert into movies(year, length, title, subject, popularity, awards) VALUES (199
 insert into movies(year, length, title, subject, popularity, awards) VALUES (1971,138,'A Clockwork Orange','Science Fiction',83,'Yes');
 insert into movies(year, length, title, subject, popularity, awards) VALUES (1967,100,'A Coeur Joie, (Head Over Heels)','Action',54,'No');
 
+
+select * from movies;
+select title from movies;
+select * from movies where year = 1962;
+select * from movies where length > 100;
+select title from movies where subject = 'Science Fiction';
+select * from movies where subject = 'Drama' && awards = 'yes';
+select Max(popularity) AS LargestPopularity from movies;
+
+select * from movies where popularity = (select max(popularity) from movies);
+
+
 drop database IMDB;
 drop table movies;
