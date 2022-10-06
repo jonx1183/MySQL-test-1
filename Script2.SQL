@@ -36,3 +36,13 @@ select * from Student1 where name1 like '%o%';
 -- Order by
 select * from student1 order by name1 desc;
 select * from student1 order by name1 asc;
+
+-- count/avr
+
+select count(*) as numbersOfStudentsAtKEA from Student1;
+select avg(gender) as avgGenderssAtKEA from Student1;
+
+-- in
+
+select * from student1 where gender in (0, 2, 5, 6);
+select * from student1 where name1 in ('Jon','Zen','Testington');
