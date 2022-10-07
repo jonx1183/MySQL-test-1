@@ -25,6 +25,8 @@ select sum(primary_type = 'Grass'), sum(primary_type = 'Normal'), sum(primary_ty
 
 select avg(hp) as hpavg from pokemon;
 select count(*) as FireTypeHpOverAVGfrom from pokemon where primary_type = 'Fire' and hp > 64.2119;
+
+select avg(speed) as avgSpeed, primary_type from pokemon group by primary_type order by avg(speed) desc;
 -- Inserts
 INSERT INTO pokemon (pokedex_number, `name`, speed, special_defence, special_attack, defence, attack, hp, primary_type, secondary_type)
 VALUES (1, 'Bulbasaur', 45, 65, 65, 49, 49, 45, 'Grass', 'Poison');
